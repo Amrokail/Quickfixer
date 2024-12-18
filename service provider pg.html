@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Providers - Quick Fixer</title>
+  <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Quick Fixer Logo">
+      </a>
+      <ul class="menu-links">
+        <li><a href="#">Quick Fixer Business</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Become a Seller</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li class="join-btn"><a href="#">Join Us</a></li>
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+      </ul>
+      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+
+  <section class="service-providers">
+    <h1>Available Service Providers</h1>
+    
+    <p class="intro-text">
+      Browse our trusted service providers below, specializing in handy services like plumbing, roofing, and more. Click on a provider to learn more or book them directly for your needs.
+    </p>
+
+    <!-- Provider listings start here -->
+    <div class="providers-container">
+      <div class="provider-box">
+        <a href="link-to-profile-1.html" class="provider-link">
+          <img src="provider1.jpg" alt="Provider Picture" class="provider-pic">
+          <div>
+            <p><strong>David Harris</strong></p>
+            <span class="stars">★★★★☆</span>
+            <p>Skilled in plumbing and electrical repairs.</p>
+          </div>
+        </a>
+        <button class="book-button">Book Now</button>
+      </div>
+
+      <div class="provider-box">
+        <a href="link-to-profile-2.html" class="provider-link">
+          <img src="provider2.jpg" alt="Provider Picture" class="provider-pic">
+          <div>
+            <p><strong>Linda Roberts</strong></p>
+            <span class="stars">★★★☆☆</span>
+            <p>Roofing and general repairs specialist.</p>
+          </div>
+        </a>
+        <button class="book-button">Book Now</button>
+      </div>
+
+      <div class="provider-box">
+        <a href="link-to-profile-3.html" class="provider-link">
+          <img src="provider3.jpg" alt="Provider Picture" class="provider-pic">
+          <div>
+            <p><strong>Kevin Moore</strong></p>
+            <span class="stars">★★★★★</span>
+            <p>Reliable plumber for quick fixes.</p>
+          </div>
+        </a>
+        <button class="book-button">Book Now</button>
+      </div>
+
+      <div class="provider-box">
+        <a href="link-to-profile-4.html" class="provider-link">
+          <img src="provider4.jpg" alt="Provider Picture" class="provider-pic">
+          <div>
+            <p><strong>Alice Turner</strong></p>
+            <span class="stars">★★★★☆</span>
+            <p>Expert in plumbing and water heaters.</p>
+          </div>
+        </a>
+        <button class="book-button">Book Now</button>
+      </div>
+
+      <div class="provider-box">
+        <a href="link-to-profile-5.html" class="provider-link">
+          <img src="provider5.jpg" alt="Provider Picture" class="provider-pic">
+          <div>
+            <p><strong>Sam Lee</strong></p>
+            <span class="stars">★★★★☆</span>
+            <p>Bathroom remodels and plumbing solutions.</p>
+          </div>
+        </a>
+        <button class="book-button">Book Now</button>
+      </div>
+
+      <div class="provider-box">
+        <a href="link-to-profile-6.html" class="provider-link">
+          <img src="provider6.jpg" alt="Provider Picture" class="provider-pic">
+          <div>
+            <p><strong>Nina Walker</strong></p>
+            <span class="stars">★★★☆☆</span>
+            <p>Roofing and electrical services handyman.</p>
+          </div>
+        </a>
+        <button class="book-button">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    body {
+      background: #1B1B1D;
+      color: #fff;
+    }
+
+    .service-providers {
+      padding: 20px;
+      max-width: 1280px;
+      margin: 200px auto 0;
+      background-color: #2C2C2E;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-providers h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .providers-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .provider-box {
+      background: #f9f9f9;
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+    }
+
+    .provider-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #333;
+      width: 100%;
+    }
+
+    .provider-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #1dbf73;
+    }
+
+    .provider-box p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .provider-box strong {
+      color: #333;
+    }
+
+    .stars {
+      color: #FFD700; /* Gold color for stars */
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    .book-button {
+      background-color: #1dbf73;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      position: absolute;
+      right: 15px;
+    }
+
+    .book-button:hover {
+      background-color: #19a463;
+    }
+  </style>
+</body>
+</html>

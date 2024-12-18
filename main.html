@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Handy - Service Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add custom styles for notification */
+        .notification {
+            background-color: #4caf50; /* Green background */
+            color: white; /* White text */
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        nav {
+            width: 100%; /* Take full width */
+            display: flex; /* Flexbox for side-by-side layout */
+            justify-content: center; /* Center navigation items */
+            margin-top: 10px; /* Add space between logo and nav */
+        }
+
+        nav ul {
+            display: flex; /* Flexbox for side-by-side layout */
+            gap: 200px; /* Increased space between links */
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+        }
+
+        nav a {
+            color: white; /* Change link color to white */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        /* Footer spacing */
+        footer {
+            margin-top: 40px; /* Add more space above the footer */
+        }
+    </style>
+</head>
+<body class="servicepage">
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="mrhandy.png" alt="Mr. Handy Logo"> <!-- Include your logo image -->
+            <h1>Mr. Handy</h1> <!-- Updated name -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Platform Section -->
+    <section class="main-platform">
+        <h2 id="welcome-message">Welcome to Mr. Handy!</h2>
+        <p>Do you need a service or provide a service?</p>
+        
+        <button id="need-service-btn">I Need a Service</button>
+        <button id="provide-service-btn">I Provide a Service</button>
+
+        <!-- Service Request Form -->
+        <div id="service-form" style="display: none;">
+            <h3>Service Request Form</h3>
+            <form id="request-form" style="background-color: #4c5eaf; padding: 20px; border-radius: 10px;">
+                <label for="service-type">Type of Service:</label>
+                <select id="service-type" required>
+                    <option value="">Select a service...</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="roofing">Roofing</option>
+                    <option value="gardening">Gardening</option>
+                    <option value="windows">Windows</option>
+                    <!-- Add more services as needed -->
+                </select>
+
+                <label for="service-date">Date:</label>
+                <input type="date" id="service-date" required>
+
+                <label for="expected-price">Expected Price (CAD):</label>
+                <input type="number" id="expected-price" placeholder="Enter expected price in CAD" required>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" placeholder="Any additional comments..." rows="4"></textarea>
+
+                <button type="submit">Post</button>
+            </form>
+        </div>
+
+        <!-- Service Offering Form -->
+        <div id="offering-form" style="display: none;">
+            <h3>Service Offering Form</h3>
+            <form id="offer-form" style="background-color: #4c5eaf; padding: 20px; border-radius: 10px;">
+                <label for="offered-service">Service Offered:</label>
+                <input type="text" id="offered-service" placeholder="Enter the service you provide" required>
+
+                <label for="availability">Availability:</label>
+                <input type="text" id="availability" placeholder="When are you available?" required>
+
+                <label for="price">Price (CAD):</label>
+                <input type="number" id="price" placeholder="Enter your price in CAD" required>
+
+                <label for="comments-offer">Comments:</label>
+                <textarea id="comments-offer" placeholder="Any additional comments..." rows="4"></textarea>
+
+                <button type="submit">Post</button>
+            </form>
+        </div>
+
+        <!-- Notification Section -->
+        <div class="notification" id="notification"></div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Mr. Handy. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+    <script>
+        // JavaScript to handle button clicks
+        document.getElementById('need-service-btn').addEventListener('click', function() {
+            document.getElementById('service-form').style.display = 'block'; // Show service request form
+            document.getElementById('offering-form').style.display = 'none'; // Hide service offering form
+            document.getElementById('notification').style.display = 'none'; // Hide notification
+        });
+
+        document.getElementById('provide-service-btn').addEventListener('click', function() {
+            document.getElementById('offering-form').style.display = 'block'; // Show service offering form
+            document.getElementById('service-form').style.display = 'none'; // Hide service request form
+            document.getElementById('notification').style.display = 'none'; // Hide notification
+        });
+
+        // Handle submission of request form
+        document.getElementById('request-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Process form submission (e.g., send to server)
+            // Display notification
+            document.getElementById('notification').innerText = "Your request has been successfully submitted! You'll receive notifications and updates shortly.";
+            document.getElementById('notification').style.display = 'block'; // Show notification
+            this.reset(); // Reset the form
+        });
+
+        // Handle submission of offer form
+        document.getElementById('offer-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Process form submission (e.g., send to server)
+            // Display notification
+            document.getElementById('notification').innerText = "Your service offer has been successfully submitted! You'll receive notifications and updates shortly.";
+            document.getElementById('notification').style.display = 'block'; // Show notification
+            this.reset(); // Reset the form
+        });
+    </script>
+</body>
+</html>

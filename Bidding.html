@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Provider Offers - Quick Fixer</title>
+  <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Quick Fixer Logo">
+      </a>
+      <ul class="menu-links">
+        <li><a href="#">Quick Fixer Business</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Become a Seller</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li class="join-btn"><a href="#">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="provider-offers">
+    <h1>Service Provider Offers for Your Request</h1>
+    
+    <p class="intro-text">
+      Below are offers from service providers for your plumbing request. Review their offers and accept the one that suits you best.
+    </p>
+
+    <!-- Service provider offer listings start here -->
+    <div class="offers-container">
+      <div class="offer-box">
+        <img src="serv1.png" alt="Alex Johnson" class="provider-pic">
+        <p><strong>Alex Johnson</strong> <span class="rating">★★★★☆ (4.5/5)</span></p>
+        <p class="description">Certified plumber with expertise in residential repairs and installations. Reliable and quick service.</p>
+        <p>Offer Price: <strong>$120</strong></p>
+        <button class="accept-button" onclick="acceptOffer('Alex Johnson', 120)">Accept Offer</button>
+      </div>
+      
+      <div class="offer-box">
+        <img src="serv2.png" alt="Maria Lopez" class="provider-pic">
+        <p><strong>Maria Lopez</strong> <span class="rating">★★★★☆ (4.3/5)</span></p>
+        <p class="description">Experienced in fast response and emergency repairs. Customer satisfaction is my priority.</p>
+        <p>Offer Price: <strong>$110</strong></p>
+        <button class="accept-button" onclick="acceptOffer('Maria Lopez', 110)">Accept Offer</button>
+      </div>
+
+      <div class="offer-box">
+        <img src="serv3.png" alt="John Thompson" class="provider-pic">
+        <p><strong>John Thompson</strong> <span class="rating">★★★★☆ (4.0/5)</span></p>
+        <p class="description">Dedicated to quality installations and long-term plumbing solutions.</p>
+        <p>Offer Price: <strong>$100</strong></p>
+        <button class="accept-button" onclick="acceptOffer('John Thompson', 100)">Accept Offer</button>
+      </div>
+
+      <div class="offer-box">
+        <img src="serv4.png" alt="Emma Davis" class="provider-pic">
+        <p><strong>Emma Davis</strong> <span class="rating">★★★★★ (4.8/5)</span></p>
+        <p class="description">Specialist in leak repairs and full-service plumbing installations. Reliable and trustworthy.</p>
+        <p>Offer Price: <strong>$130</strong></p>
+        <button class="accept-button" onclick="acceptOffer('Emma Davis', 130)">Accept Offer</button>
+      </div>
+
+      <div class="offer-box">
+        <img src="provider5.png" alt="Michael Chen" class="provider-pic">
+        <p><strong>Michael Chen</strong> <span class="rating">★★★☆☆ (3.8/5)</span></p>
+        <p class="description">Affordable plumbing services with a focus on quick, effective solutions.</p>
+        <p>Offer Price: <strong>$90</strong></p>
+        <button class="accept-button" onclick="acceptOffer('Michael Chen', 90)">Accept Offer</button>
+      </div>
+
+      <div class="offer-box">
+        <img src="provider6.png" alt="Sophia Martin" class="provider-pic">
+        <p><strong>Sophia Martin</strong> <span class="rating">★★★★★ (4.9/5)</span></p>
+        <p class="description">Professional plumbing services with a reputation for customer satisfaction and attention to detail.</p>
+        <p>Offer Price: <strong>$140</strong></p>
+        <button class="accept-button" onclick="acceptOffer('Sophia Martin', 140)">Accept Offer</button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    body {
+      background: #1B1B1D;
+      color: #fff;
+    }
+
+    .provider-offers {
+      padding: 20px;
+      max-width: 1280px;
+      margin: 200px auto 0;
+      background-color: #2C2C2E;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .provider-offers h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .offers-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .offer-box {
+      background: #f9f9f9;
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      position: relative;
+      color: #333;
+      width: 45%; /* Adjust width to fit two in a row */
+      box-sizing: border-box;
+    }
+
+    .provider-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #1dbf73;
+    }
+
+    .offer-box p {
+      margin: 5px 0;
+    }
+
+    .offer-box strong {
+      color: #333;
+    }
+
+    .description {
+      font-style: italic;
+      color: #555;
+    }
+
+    .rating {
+      font-weight: bold;
+      color: #f39c12;
+      margin-left: 10px;
+    }
+
+    .accept-button {
+      background-color: #1dbf73;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .accept-button:hover {
+      background-color: #19a463;
+    }
+  </style>
+
+  <script>
+    // Function to accept an offer from a provider
+    function acceptOffer(providerName, price) {
+      alert(`You have accepted the offer from ${providerName} for $${price}.`);
+      // Additional logic can be added here to update the UI or send a confirmation to the backend.
+    }
+  </script>
+</body>
+</html>

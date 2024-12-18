@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Requests - Quick Fixer</title>
+  <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Quick Fixer Logo">
+      </a>
+      <ul class="menu-links">
+        <li><a href="#">Quick Fixer Business</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Become a Seller</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li class="join-btn"><a href="#">Join Us</a></li>
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+      </ul>
+      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+
+  <section class="customer-requests">
+    <h1>Customer Plumbing Service Requests</h1>
+    
+    <p class="intro-text">
+      Explore customers' active requests for plumbing services below. These listings include jobs ranging from simple faucet repairs to more extensive installations. Browse through the offers, and if you're available, accept a request and start earning today!
+    </p>
+
+    <!-- Request listings start here -->
+    <div class="requests-container">
+      <div class="request-box">
+        <img src="man1.png" alt="John Doe" class="customer-pic">
+        <p><strong>John Doe</strong></p>
+        <p>Requesting plumbing service for a leaky faucet.</p>
+        <p><em>Address:</em> <span class="address">123 Maple St, Toronto, ON</span></p>
+        <button class="request-button">Provide an Offer</button>
+      </div>
+      <div class="request-box">
+        <img src="girl1.png" alt="Jane Smith" class="customer-pic">
+        <p><strong>Jane Smith</strong></p>
+        <p>Need urgent plumbing for a clogged drain.</p>
+        <p><em>Address:</em> <span class="address">456 Oak Ave, Vancouver, BC</span></p>
+        <button class="request-button">Provide an Offer</button>
+      </div>
+      <div class="request-box">
+        <img src="man2.png" alt="Bob Johnson" class="customer-pic">
+        <p><strong>Bob Johnson</strong></p>
+        <p>Looking for help with a broken toilet.</p>
+        <p><em>Address:</em> <span class="address">789 Pine Rd, Montreal, QC</span></p>
+        <button class="request-button">Provide an Offer</button>
+      </div>
+      <div class="request-box">
+        <img src="girl3.png" alt="Emily Davis" class="customer-pic">
+        <p><strong>Emily Davis</strong></p>
+        <p>Need assistance with a water heater installation.</p>
+        <p><em>Address:</em> <span class="address">321 Birch Blvd, Calgary, AB</span></p>
+        <button class="request-button">Provide an Offer</button>
+      </div>
+      <div class="request-box">
+        <img src="customer5.jpg" alt="Michael Brown" class="customer-pic">
+        <p><strong>Michael Brown</strong></p>
+        <p>Seeking help for a plumbing inspection.</p>
+        <p><em>Address:</em> <span class="address">654 Cedar St, Ottawa, ON</span></p>
+        <button class="request-button">Provide an Offer</button>
+      </div>
+      <div class="request-box">
+        <img src="girl2.png" alt="Sarah White" class="customer-pic">
+        <p><strong>Sarah White</strong></p>
+        <p>Need repair for a leaking pipe.</p>
+        <p><em>Address:</em> <span class="address">987 Spruce Rd, Edmonton, AB</span></p>
+        <button class="request-button">Provide an Offer</button>
+      </div>
+      <div class="request-box">
+        <img src="man3.png" alt="Chris Black" class="customer-pic">
+        <p><strong>Chris Black</strong></p>
+        <p>Looking for plumbing service for a bathroom remodel.</p>
+        <p><em>Address:</em> <span class="address">135 Elm St, Winnipeg, MB</span></p>
+        <button class="request-button">Provide an Offer</button>
+      </div>
+      <div class="request-box">
+        <img src="customer8.jpg" alt="Jessica Green" class="customer-pic">
+        <p><strong>Jessica Green</strong></p>
+        <p>Requesting assistance with a broken faucet.</p>
+        <p><em>Address:</em> <span class="address">246 Birch Ave, Halifax, NS</span></p>
+        <button class="request-button">Provide an Offer</button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    body {
+      background: #1B1B1D; /* Black background */
+      color: #fff; /* White text for contrast */
+    }
+
+    .customer-requests {
+      padding: 20px;
+      max-width: 1280px;
+      margin: 200px auto 0; /* Increased margin to push down listings further */
+      background-color: #2C2C2E; /* Dark background for the section */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .customer-requests h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 30px; /* Space between intro and listings */
+    }
+
+    .requests-container {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      gap: 20px;
+      justify-content: center;
+      align-items: stretch; /* Stretch to full width */
+    }
+
+    .request-box {
+      background: #f9f9f9;
+      border-radius: 20px; /* Increased border radius for bubble effect */
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Slightly increased shadow for depth */
+      display: flex; /* Use flexbox for layout */
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the left */
+      gap: 10px; /* Space between image and text */
+      position: relative; /* Make the button placement relative to the box */
+    }
+
+    .customer-pic {
+      width: 60px; /* Adjust size as needed */
+      height: 60px; /* Adjust size as needed */
+      border-radius: 50%; /* Circular shape */
+      border: 2px solid #1dbf73; /* Border to enhance bubble effect */
+    }
+
+    .request-box p {
+      margin: 5px 0; /* Reduced margin for spacing */
+      color: #555;
+    }
+
+    .request-box strong {
+      color: #333;
+    }
+
+    .request-button {
+      background-color: #1dbf73;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      position: absolute; /* Position button inside request-box */
+      right: 15px; /* Align button to the right */
+      top: 50%; /* Vertical centering */
+      transform: translateY(-50%); /* Fine-tune vertical centering */
+    }
+
+    .request-button:hover {
+      background-color: #19a463;
+    }
+  </style>
+</body>
+</html>

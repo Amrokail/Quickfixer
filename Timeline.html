@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Handy - Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Timeline Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            color: #333; /* Dark text for readability */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4c5eaf; /* Match your website color */
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Timeline container styles */
+        .timeline {
+            max-width: 800px; /* Set a maximum width for the timeline */
+            margin: 20px auto; /* Center align with margin */
+            padding: 20px;
+            background-color: white; /* White background for posts */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Post styles */
+        .post {
+            border-bottom: 1px solid #eee; /* Divider between posts */
+            padding: 10px 0;
+        }
+
+        .post:last-child {
+            border-bottom: none; /* Remove bottom border for the last post */
+        }
+
+        .post h3 {
+            margin: 0; /* Remove margin for post titles */
+        }
+
+        .post img {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        /* Rating styles */
+        .rating {
+            color: gold; /* Gold color for stars */
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center; /* Centered text */
+            padding: 20px;
+            background-color: #4c5eaf; /* Match your website color */
+            color: white;
+            margin-top: 40px; /* Space above footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mr. Handy Timeline</h1>
+    </header>
+
+    <section class="timeline">
+        <h2>Customer Requests</h2>
+        <div class="post">
+            <h3>Customer Name</h3>
+            <p>Post: Need help with plumbing!</p>
+            <p>Date: 2024-10-09</p>
+            <p>Rating: <span class="rating">⭐⭐⭐⭐⭐</span></p>
+            <img src="customer_request_image.jpg" alt="Customer Request">
+            <p>Jobs Done: 5</p>
+        </div>
+        <div class="post">
+            <h3>Customer Name</h3>
+            <p>Post: Looking for a gardener.</p>
+            <p>Date: 2024-10-08</p>
+            <p>Rating: <span class="rating">⭐⭐⭐⭐</span></p>
+            <img src="customer_request_image.jpg" alt="Customer Request">
+            <p>Jobs Done: 3</p>
+        </div>
+
+        <h2>Service Provider Offers</h2>
+        <div class="post">
+            <h3>Provider Name</h3>
+            <p>Post: Offering plumbing services!</p>
+            <p>Date: 2024-10-09</p>
+            <p>Rating: <span class="rating">⭐⭐⭐⭐⭐</span></p>
+            <img src="provider_offer_image.jpg" alt="Provider Offer">
+            <p>Jobs Done: 20</p>
+        </div>
+        <div class="post">
+            <h3>Provider Name</h3>
+            <p>Post: Gardening services available.</p>
+            <p>Date: 2024-10-08</p>
+            <p>Rating: <span class="rating">⭐⭐⭐⭐⭐</span></p>
+            <img src="provider_offer_image.jpg" alt="Provider Offer">
+            <p>Jobs Done: 15</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mr. Handy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

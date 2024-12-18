@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Fixer - Find Services Fast</title>
+  <link rel="stylesheet" href="st.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+  <style>
+    .logo img {
+      width: 170px;
+      height: 170px;
+      border-radius: 70%;
+      object-fit: cover;
+    }
+
+    .search-form select, 
+    .search-form button {
+      width: 300px;
+      height: 40px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .search-form button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: auto;
+    }
+
+    .search-form button:hover {
+      background-color: #45a049;
+    }
+
+    .search-form {
+      display: flex;
+      gap: 10px;
+    }
+
+    .hero-section {
+      height: 100vh;
+      background-image: url("images/hero-img.jpg");
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      padding: 0 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-section .content {
+      max-width: 1280px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-section .content h1 {
+      color: #fff;
+      font-size: 3rem;
+      max-width: 600px;
+      line-height: 1.2;
+      margin: 180px auto 30px;
+      text-align: center;
+    }
+
+    .hero-section .popular-tags {
+      color: #fff;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Quick Fixer Logo">
+      </a>
+      <ul class="menu-links">
+        <li><a href="#">Quick Fixer Business</a></li>
+        <li><a href="#">Explore</a></li>
+        <li class="language-item">
+          <a href="#">
+            <span class="material-symbols-outlined">language</span>
+            English
+          </a>
+        </li>
+        <li><a href="#">Become a Seller</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li class="join-btn"><a href="#">Join Us</a></li>
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+      </ul>
+      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="content">
+      <h1 style="margin-top: 100px; max-width: 600px; text-align: center;">Connect with the right people, whether you're offering or requesting services!</h1>
+      <form action="#" class="search-form" id="service-form">
+        <select id="service-choice" required>
+          <option value="" disabled selected>Select a service</option>
+          <option value="Plumbing">Plumbing</option>
+          <option value="Roofing">Roofing</option>
+          <option value="Gardening">Gardening</option>
+          <option value="Repair">Window Repair</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <select id="user-choice" required>
+          <option value="" disabled selected>Are you?</option>
+          <option value="Looking for a service">Need a service</option>
+          <option value="Provide a service">Provide a service</option>
+        </select>
+
+        <select id="action-choice" required>
+          <option value="" disabled selected>Select an action</option>
+        </select>
+
+        <button type="button" id="search-button" class="material-symbols-outlined">search</button>
+      </form>
+
+      <div class="popular-tags">
+        Popular:
+        <ul class="tags">
+          <li><a href="#">Plumbing</a></li>
+          <li><a href="#">Roofing</a></li>
+          <li><a href="#">Gardening</a></li>
+          <li><a href="#">Window Repair</a></li>
+          <li><a href="#">Other</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const userChoice = document.getElementById("user-choice");
+    const actionChoice = document.getElementById("action-choice");
+    const searchButton = document.getElementById("search-button");
+
+    userChoice.addEventListener("change", function() {
+      actionChoice.innerHTML = '<option value="" disabled selected>Select an action</option>'; // Reset third dropdown
+
+      const service = document.getElementById("service-choice").value;
+
+      // Update the action choices based on user choice and service
+      if (service === "Plumbing") {
+        if (this.value === "Looking for a service") {
+          actionChoice.innerHTML += `
+            <option value="Book With a Service Provider Now">Book With a Service Provider Now</option>
+            <option value="Submit a customized service request">Submit a Customized Service Request</option>
+          `;
+        } else if (this.value === "Provide a service") {
+          actionChoice.innerHTML += `
+            <option value="Search clients service requests">Search Clients Service Requests</option>
+          `;
+        }
+      }
+    });
+
+    searchButton.addEventListener("click", function() {
+      const service = document.getElementById("service-choice").value;
+      const user = userChoice.value;
+      const action = actionChoice.value;
+
+      // Links for plumbing service options
+      const serviceOfferLink = "http://127.0.0.1:5500/Customers%20requests.tml"; // Link for "Search for the service providers"
+      const customRequestLink = "path_to_your_custom_request_page.html"; // Link for "Submit a customized service request"
+      const customerRequestLink = "http://127.0.0.1:5500/Customer%20requests.html"; // Link for "Search clients service requests"
+
+      // Logic for Plumbing options based on user role and action
+      if (service === "Plumbing") {
+        if (user === "Looking for a service") {
+          if (action === "Book With a Service Provider Now") {
+            window.location.href = serviceOfferLink; // Navigate to service offers page
+          } else if (action === "Submit a customized service request") {
+            window.location.href = customRequestLink; // Navigate to custom request page
+          } else {
+            alert("Please select a valid option for looking for a service.");
+          }
+        } else if (user === "Provide a service") {
+          if (action === "Search clients service requests") {
+            window.location.href = customerRequestLink; // Navigate to customer requests page
+          } else {
+            alert("Please select a valid option for providing a service.");
+          }
+        } else {
+          alert("Please select a valid user type.");
+        }
+      } else {
+        alert("Please select a valid service.");
+      }
+    });
+  </script>
+</body>
+</html>

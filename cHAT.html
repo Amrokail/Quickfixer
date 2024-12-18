@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Providers - Quick Fixer</title>
+  <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Quick Fixer Logo">
+      </a>
+      <ul class="menu-links">
+        <li><a href="#">Quick Fixer Business</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Become a Seller</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li class="join-btn"><a href="#">Join Us</a></li>
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+      </ul>
+      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+
+  <section class="service-providers">
+    <h1>Top Plumbing Service Providers</h1>
+    
+    <p class="intro-text">
+      Meet our highly-rated service providers who specialize in a variety of plumbing services. Explore their profiles, check reviews, and get started by chatting directly.
+    </p>
+
+    <!-- Provider profile listings start here -->
+    <div class="providers-container">
+      <div class="provider-box">
+        <img src="Untitled.png" alt="David Martinez" class="provider-pic">
+        <p><strong>David Martinez </strong></p>
+        <p class="intro">Experienced plumber specializing in residential repairs and installations.</p>
+        <div class="rating">
+          <span class="stars">★★★★☆</span> 4.5 (32 reviews)
+        </div>
+        <div class="reviews">
+          <p><em>"Quick and efficient service. Highly recommend!"</em> – Sarah White</p>
+          <p><em>"Professional and friendly. Fixed my issues in no time!"</em> – Michael Brown</p>
+        </div>
+        <button class="chat-button" onclick="openChatBox()">Chat Now</button>
+      </div>
+      <!-- Additional provider profiles with the same structure -->
+    </div>
+  </section>
+
+  <!-- Chat Box -->
+  <div id="chat-box" class="chat-box">
+    <div class="chat-header">
+      <span>Chat with Davide</span>
+      <button onclick="closeChatBox()" class="close-chat-btn">X</button>
+    </div>
+    <div class="chat-content" id="chat-content">
+      <!-- Initial conversation messages -->
+      <p class="chat-message bot"><strong>Davide:</strong> Hi! How can I help you today?</p>
+      <p class="chat-message user"><strong>Amr:</strong> Hello, Davide! Could you possibly reduce the price for your plumbing service?</p>
+      <p class="chat-message bot"><strong>Davide:</strong> I’d be happy to discuss that. What’s your budget?</p>
+      <p class="chat-message user"><strong>Amr:</strong> I was hoping to get a 10% discount. Could that work?</p>
+      <p class="chat-message bot"><strong>Davide:</strong> Let me see what I can do. I’ll check and get back to you shortly.</p>
+      <p class="chat-message user"><strong>Amr:</strong> Thanks, I appreciate it!</p>
+    </div>
+    <div class="chat-input-container">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <style>
+    body {
+      background: #1B1B1D;
+      color: #fff;
+    }
+
+    .service-providers {
+      padding: 20px;
+      max-width: 1280px;
+      margin: 200px auto 0;
+      background-color: #2C2C2E;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-providers h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .providers-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .provider-box {
+      background: #f9f9f9;
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .provider-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #1dbf73;
+    }
+
+    .provider-box p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .provider-box strong {
+      color: #333;
+      font-size: 1.2em;
+    }
+
+    .intro {
+      color: #777;
+      font-style: italic;
+      font-size: 0.9em;
+    }
+
+    .rating {
+      color: #f39c12;
+      font-size: 1em;
+    }
+
+    .reviews {
+      color: #666;
+      font-size: 0.9em;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+
+    .chat-button {
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .chat-button:hover {
+      background-color: #334d84;
+    }
+
+    /* Chat Box */
+    .chat-box {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background-color: #2C2C2E;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      padding: 10px;
+      background-color: #1dbf73;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close-chat-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .chat-content {
+      padding: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .chat-message {
+      margin-bottom: 8px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .chat-message.bot {
+      color: #ccc;
+      text-align: left;
+      background-color: #444;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 5px 0;
+    }
+
+    .chat-message.user {
+      color: #1dbf73;
+      text-align: right;
+      background-color: #333;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 5px 0;
+    }
+
+    .chat-input-container {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #333;
+    }
+
+    .chat-input-container input {
+      flex-grow: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+
+    .chat-input-container button {
+      background-color: #1dbf73;
+      color: white;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    function openChatBox() {
+      document.getElementById('chat-box').style.display = 'flex';
+    }
+
+    function closeChatBox() {
+      document.getElementById('chat-box').style.display = 'none';
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const message = input.value.trim();
+      if (message) {
+        const chatContent = document.getElementById('chat-content');
+        const newMessage = document.createElement('p');
+        newMessage.className = 'chat-message user';
+        newMessage.innerHTML = `<strong>Amr:</strong> ${message}`;
+        chatContent.appendChild(newMessage);
+        input.value = '';
+        chatContent.scrollTop = chatContent.scrollHeight;
+      }
+    }
+  </script>
+</body>
+</html>

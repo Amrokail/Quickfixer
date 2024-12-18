@@ -1,0 +1,183 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Simple background */
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Improved readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+header {
+    background: #4c59af; /* Green background for header */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.logo img {
+    width: 250px; /* Adjust logo size */
+    height: max-content;
+}
+
+.logo h1 {
+    color: white; /* White color for the logo text */
+}
+
+/* Layout Wrapper to Align Left and Right Sections */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Introduction Section - Left-aligned */
+.intro-section {
+    text-align: left;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 10px;
+    flex: 2;
+}
+
+/* Login Section - Right-aligned */
+.login-section {
+    text-align: left;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px; /* Adjust the width for the login section */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4c5baf;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #455aa0;
+}
+
+/* Who We Are Section - Left-aligned */
+.who-we-are {
+    text-align: left;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 10px;
+    width: 80%; /* Make the width consistent with the layout */
+}
+
+/* Our Services Section - Left-aligned */
+.our-services {
+    text-align: left;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+/* Review Section */
+.reviews {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.review {
+    margin: 20px 0; /* Increased margin for clarity */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align reviews to the left */
+}
+
+.review img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+blockquote {
+    border-left: 4px solid #4c4caf;
+    padding-left: 15px;
+    font-style: italic;
+    max-width: 600px; /* Limit the width of the text to prevent overflow */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4c5eaf; /* Green footer */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.servicepage {
+    background-image: url('handyman-apps.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */}
+
+/* Unique class for the service page background */
+.servicelist .service-form {
+    background-color: #4c5eaf; /* Blue background for the form */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+}

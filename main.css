@@ -1,0 +1,89 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Improved readability */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50; /* Green background for header */
+    padding: 20px;
+    width: 100%; /* Full width header */
+    text-align: center;
+}
+
+.logo h1 {
+    color: white; /* White color for the logo text */
+}
+
+/* Main Platform Section */
+.main-platform {
+    text-align: center; /* Center text */
+    padding: 50px;
+    background: white; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px; /* Margin around the section */
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 10px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements */
+    max-width: 400px; /* Max width of the form */
+    margin: 20px auto; /* Center the form */
+    background: #f9f9f9; /* Light background for the form */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+form label {
+    margin: 10px 0 5px; /* Space above and below labels */
+}
+
+form input, form select {
+    padding: 10px; /* Padding for input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50; /* Green background for footer */
+    color: white; /* White text */
+    width: 100%; /* Full width footer */
+    position: relative;
+    bottom: 0;
+}

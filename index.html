@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Connect - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add custom styles for navigation */
+        nav {
+            display: flex; /* Flexbox for horizontal layout */
+            justify-content: center; /* Center navigation items */
+            margin-top: 10px; /* Space above nav */
+        }
+
+        nav ul {
+            display: flex; /* Flexbox for side-by-side layout */
+            gap: 200px; /* Space between links */
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+        }
+
+        nav a {
+            color: white; /* Change link color to white */
+            text-decoration: none; /* Remove underline from links */
+            font-size: 18px; /* Adjust font size */
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: center; /* Center items horizontally */
+            background-color: #3c435d; /* Header background color */
+            padding: 20px; /* Padding for header */
+        }
+
+        /* Main content styles */
+        .main-content {
+            display: flex; /* Flex container for sections */
+            justify-content: space-between; /* Space between sections */
+            padding: 20px; /* Padding around main content */
+        }
+
+        .intro-section {
+            flex: 1; /* Take available space */
+            margin-right: 20px; /* Space between sections */
+        }
+
+        .login-section {
+            flex: 0 0 300px; /* Fixed width for login section */
+        }
+
+        /* Section styles */
+        section {
+            margin: 20px 0; /* Space above and below sections */
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center; /* Center footer text */
+            padding: 20px; /* Padding for footer */
+            background-color: #384a9b; /* Footer background color */
+            color: white; /* White text for footer */
+        }
+
+        /* Rating styles */
+        .rating {
+            color: gold; /* Gold color for stars */
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="mrhandy.png" alt="Service Connect Logo"> <!-- Replace with your logo path -->
+            <h1>Mr. Handy</h1> <!-- Updated name -->
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/Timeline.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content wrapper (Flex container) -->
+    <div class="main-content">
+        <!-- Introduction Section - Left-aligned -->
+        <section class="intro-section">
+            <h2>Welcome to Service Connect!</h2>
+            <p>Our platform connects clients with local service providers for all your needs, whether it's plumbing, gardening, roofing, or more. Quick and easy access to the services you need!</p>
+        </section>
+
+        <!-- Login Section - Right-aligned -->
+        <section class="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Who We Are Section -->
+    <section class="who-we-are">
+        <h3>Who We Are</h3>
+        <p>We are dedicated to connecting people with local service providers to make life easier and more convenient.</p>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="our-services">
+        <h3>Our Services</h3>
+        <p>We provide access to a wide range of services, including plumbing, gardening, electrical repairs, and more. Whatever your needs, we’ve got you covered!</p>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews">
+        <h3>Customer Reviews</h3>
+        <div class="review">
+            <img src="Jane.jpg" alt="Customer 1"> <!-- Replace with customer image path -->
+            <blockquote>
+                "Service Connect helped me find a reliable plumber in no time. Highly recommend!"
+                <footer>- Jane D. <span class="rating">⭐⭐⭐⭐⭐</span></footer>
+            </blockquote>
+        </div>
+        <div class="review">
+            <img src="Mark.jpg" alt="Customer 2"> <!-- Replace with customer image path -->
+            <blockquote>
+                "I love how easy it is to connect with local services. Thank you, Service Connect!"
+                <footer>- Mark T. <span class="rating">⭐⭐⭐⭐½</span></footer>
+            </blockquote>
+        </div>
+        <div class="review">
+            <img src="sarah.jpg" alt="Customer 3"> <!-- Replace with customer image path -->
+            <blockquote>
+                "Fast, efficient, and friendly service. Will definitely use again!"
+                <footer>- Sarah K. <span class="rating">⭐⭐⭐⭐</span></footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Service Connect. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
